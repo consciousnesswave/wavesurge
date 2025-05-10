@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "WaveSurge",
+  "version": "1.0.0",
+  "description": "Proxy Switcher",
+  "icons": {
+    "16": "icons/icon.png",
+    "19": "icons/icon.png",
+    "38": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  "action": {
+    "default_title": "WaveSurge",
+    "default_icon": "icons/icon.png",
+    "default_popup": "popup/index.html"
+  },
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "alarms",
+    "storage",
+    "contextMenus",
+    "scripting",
+    "notifications"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "popup/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "use_dynamic_url": true
+    }
+  ]
+}
