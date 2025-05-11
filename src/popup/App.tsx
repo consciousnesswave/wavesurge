@@ -11,12 +11,17 @@ const App: React.FC = () => {
     { label: 'Proxy', value: '2' },
     { label: 'Auto', value: '3' }
   ];
+  const handleClick = () => {
+    chrome.tabs.create({
+      url: chrome.runtime.getURL("setting/index.html")
+    });
+  }
 
   return (
     <>
       <Flex justify="space-between">
         <Text strong>Control Panel</Text>
-        <SettingFilled />
+        <SettingFilled onClick={handleClick} />
       </Flex>
       <Radio.Group
         style={{ marginTop: 10 }}

@@ -15,6 +15,7 @@ export default defineConfig({
         popup: path.resolve(__dirname, "src/popup/index.html"),
         background: path.resolve(__dirname, "src/background/service-worker.tsx"
         ),
+        setting: path.resolve(__dirname, "src/setting/index.html"),
       },
       output: {
         assetFileNames: "assets/[name]-[hash].[ext]",
